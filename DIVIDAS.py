@@ -22,6 +22,10 @@ cur.execute(create_table3)
 create_trigger = ('CREATE TRIGGER IF NOT EXISTS tr_parcelado AFTER INSERT on cartao BEGIN INSERT INTO cartao_parcela (id_cartao, valor) VALUES (NEW.ID, NEW.VALOR); END;')
 cur.execute(create_trigger)
 
+# Create Trigger2
+create_trigger = ('CREATE TRIGGER IF NOT EXISTS tr_parcelado2 AFTER INSERT on cartao BEGIN INSERT INTO cartao_parcela (id_cartao, valor) VALUES (NEW.ID, NEW.VALOR); END;')
+cur.execute(create_trigger)
+
 
 class controleFinanceiro:
 
